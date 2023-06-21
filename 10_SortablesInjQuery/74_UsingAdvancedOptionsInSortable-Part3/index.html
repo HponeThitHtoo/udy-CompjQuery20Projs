@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using Advance Options in Sortable Part-3</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #sortable-1, #sortable-2, #sortable-3 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 28%;
+    }
+    #sortable-1 li, #sortable-2 li, #sortable-3 li {
+      margin: 0px 3px 3px 3px;
+      padding: 0.4em;
+      height: 18px;
+      font-size: 18px;
+      font-family: Georgis, "Times New Roman", Times, serif;
+    }
+    .default {
+      background: #99f;
+      color: #f00;
+      border: 4px solid #c00;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#sortable-1').sortable({
+        connectWith: "#sortable-2, #sortable-3"
+      });
+
+      $('#sortable-2').sortable({
+        connectWith: "#sortable-1"
+      });
+
+      $('#sortable-3').sortable({
+        connectWith: '#sortable-1',
+        dropOnEmpty: false,
+      });
+    });
+  </script>
+</head>
+<body>
+  <ul id="sortable-1">
+    <h1>Team A</h1>
+    <li class="default">Player 1</li>
+    <li class="default">Player 2</li>
+    <li class="default">Player 3</li>
+    <li class="default">Player 4</li>
+    <li class="default">Player 5</li>
+  </ul>
+  <ul id="sortable-2">
+    <h1>Team B</h1>
+    <li class="default">Player 6</li>
+    <li class="default">Player 7</li>
+    <li class="default">Player 8</li>
+    <li class="default">Player 9</li>
+    <li class="default">Player 10</li>
+  </ul>
+  <ul id="sortable-3">
+    <h1>Team C</h1>
+    <li class="default">Player 11</li>
+    <li class="default">Player 12</li>
+    <li class="default">Player 13</li>
+    <li class="default">Player 14</li>
+    <li class="default">Player 15</li>
+  </ul>
+</body>
+</html>

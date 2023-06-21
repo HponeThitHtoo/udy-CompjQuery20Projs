@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The unload Event</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).unload(function() {
+        alert("Over");
+        console.log('Event Occured');
+        return "Bye now!";
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>When you click <a href="http://www.facebook.com" target="_blank">here</a> to open a new window or close the browser the unload event will occur</p>
+</body>
+</html>

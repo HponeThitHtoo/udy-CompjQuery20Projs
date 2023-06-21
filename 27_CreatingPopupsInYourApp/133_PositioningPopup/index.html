@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>we can also position pupups wherever we want</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="header">
+      <h1>Positioning popup</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <a href="#first" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="window">popup will appear at window</a>
+      <a href="#second" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="#new">popup will appear at given id</a>
+      <a href="#third" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="origin">popup will appear at origin</a>
+
+      <div data-role="popup" id="first" class="ui-content">
+        <p>This is my first part</p>
+      </div>
+      <div data-role="popup" id="second" class="ui-content">
+        <p>This is my second part</p>
+      </div>
+      <div data-role="popup" id="third" class="ui-content">
+        <p>This is my third part</p>
+      </div>
+
+      <p>This is a paragraph</p>
+      <p>This is also a paragraph</p>
+      <p>This is a new para. <span id="new">This is a new</span> para.</p>
+    </div>
+
+    <div data-role="footer">
+      <h1>This is footer</h1>
+    </div>
+  </div>
+</body>
+</html>

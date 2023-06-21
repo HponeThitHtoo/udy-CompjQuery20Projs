@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using Options in Tooltip Part-1</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    body {
+      margin-top: 100px;
+    }
+    .ui-tooltip-content::after, .ui-tooltip-content::before {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      display: block;
+    }
+    .ui-tooltip-content::before {
+      bottom: -10px;
+      border-color: #f00;
+      border-width: 10px 10px 0;
+    }
+    .ui-tooltip-content::after {
+      bottom: -8px;
+      border-color: #009;
+      border-width: 10px 10px 0;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#tooltip-1').tooltip({
+        position: {
+          my: 'center bottom',
+          at: 'center top-10',
+          collision: 'none',
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <label for="firstname">Enter first name:</label>
+  <input type="text" name="" id="tooltip-1" title="Please enter your frist name only">
+</body>
+</html>

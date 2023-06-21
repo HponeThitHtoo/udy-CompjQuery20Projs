@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction to the simple popup</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="header">
+      <h1>Hello</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <a href="#firstpopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Click here for popup</a>
+
+      <div data-role="popup" id="firstpopup" class="ui-content">
+        <h4>Hello this is a big popup</h4>
+        <p>I am the simple popup <span style="font-size: 36px;">Hello</span><b>This is a bold</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid, ipsam consectetur laborum mollitia harum voluptates facere? Dolor, odio inventore!</p>
+      </div>
+      
+    </div>
+
+    <div data-role="footer">
+      <h1>This is a footer</h1>
+    </div>
+  </div>
+</body>
+</html>

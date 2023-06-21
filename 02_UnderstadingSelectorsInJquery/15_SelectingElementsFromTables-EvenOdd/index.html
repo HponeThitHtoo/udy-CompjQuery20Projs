@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Selecting Elements From Tables - Even Odd</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('tr:odd').css('background-color', 'red');
+    });
+  </script>
+</head>
+<body>
+  <h1>This is a table</h1>
+
+  <table border="1">
+    <tr>
+      <th>Game</th>
+      <th>Player</th>
+    </tr>
+
+    <tr>
+      <th>Cricket</th>
+      <th>James</th>
+    </tr>
+
+    <tr>
+      <th>Tennis</th>
+      <th>John</th>
+    </tr>
+
+    <tr>
+      <th>Hockey</th>
+      <th>Albert</th>
+    </tr>
+
+    <tr>
+      <th>Table Tennis</th>
+      <th>Paul</th>
+    </tr>
+
+    <tr>
+      <th>Swimming</th>
+      <th>Boot</th>
+    </tr>
+
+  </table>
+</body>
+</html>

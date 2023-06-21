@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding The Position Of Cursor in Draggable</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+  <div id="div1" style="border:#f0f 2px solid; height: 100px; background-color: #9f0; font-size: 24px;">
+    <span>Click me, to find the value of the current position</span>
+  </div>
+
+  <script>
+    $('#div1 span').draggable();
+    $('#div1 span').bind('click', function(event) {
+      var cursor = $('#div1 span').draggable('option', 'cursor');
+      var cursorAt = $('#div1 span').draggable('option', 'cursorAt')
+      alert('Cursor At-' + cursor + ' Cursor-' + cursorAt);
+    });
+  </script>
+</body>
+</html>

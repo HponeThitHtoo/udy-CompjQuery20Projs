@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Let's Filter The Tables</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    th {
+      border-bottom: 2px solid #f00;
+    }
+
+    tr:nth-child(even) {
+      background: #666;
+    }
+  </style>
+</head>
+<body>
+  <div data-role="page" id="first">
+    <div data-role="header">
+      <h1>Tables</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <form action="">
+        <input type="search" name="" id="new" placeholder="Search for any student...!!!">
+      </form>
+      <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow" id="new" data-filter="true" data-input="#new">
+        <thead>
+          <tr>
+            <th data-priority="4">Student ID</th>
+            <th>Student Name</th>
+            <th data-priority="1">Contact No</th>
+            <th data-priority="2">Roll Number</th>
+            <th data-priority="3">Postal Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Albert</td>
+            <td>454545</td>
+            <td>34</td>
+            <td>12209</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bally</td>
+            <td>45454577</td>
+            <td>44</td>
+            <td>1509</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Tony</td>
+            <td>786545</td>
+            <td>14</td>
+            <td>17865</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

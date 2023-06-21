@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Discussion On Actions Used In Resizable With Functionality</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    .ui-widget-header {
+      background: #0ff;
+      border: 2px solid #000;
+      color: #f00;
+    }
+    .ui-widget-content {
+      background: #93c;
+      border: 2px solid #000;
+      color: #009;
+    }
+    #resize-1, #resize-2 {
+      width: 100px;
+      height: 100px;
+      padding: 0.5em;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#resize-1').resizable();
+      $( "#resize-1" ).resizable( "enable" );
+      $('#resize-2').resizable();
+      $('#resize-2').resizable( "destroy" );
+    });
+  </script>
+</head>
+<body>
+  <div id="resize-1" class="ui-widget-content">
+    <h1 class="ui-widget-header">I am enabled</h1>
+  </div>
+
+  <br>
+
+  <div id="resize-2" class="ui-widget-content">
+    <h1 class="ui-widget-header">I am destroyed</h1>
+  </div>
+</body>
+</html>

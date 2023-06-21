@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understaind Events in Droppable Method</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #draggable-1 {
+      width: 100px; height: 65px; padding: 0.5em; margin: 0px 5px 10px 0px; background-color: #0ff; float: left;
+    }
+    #droppable-1 {
+      width: 160px; height: 105px; padding: 0.5em; margin: 10px; background-color: #999; float: left;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#draggable-1').draggable();
+      $('#droppable-1').droppable({
+        drop: function(event, ui) {
+          $(this).addClass('ui-state-highlight')
+                  .find('span')
+                  .html('I am dropped');
+        },
+        over: function(event, ui) {
+          $(this).addClass('ui-state-highlight')
+                  .find('span')
+                  .html('I am moving in');
+        },
+        out: function(event, ui) {
+          $(this).addClass('ui-state-highlight')
+                  .find('span')
+                  .html('I am moving out');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="draggable-1" class="ui-widget-content">
+    <span>Please drag me to my target</span>
+  </div>
+  <div id="droppable-1" class="ui-widget-header">
+    <span>I am the target, drop on me</span>
+  </div>
+</body>
+</html>

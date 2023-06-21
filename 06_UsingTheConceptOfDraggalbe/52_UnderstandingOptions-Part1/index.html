@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding Options Part-1</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #d3 {
+      border: 1px solid green; background-color: #99ffcc;
+    }
+  </style>
+</head>
+<body>
+  <div id="d1" style="border: 1px solid green; background-color: #0ff;">
+    <span>Sorry, i am not draggable, try another one</span>
+  </div>
+
+  <div id="d2" style="border: 1px solid green; background-color: #ff0;">
+    <span>Hello, yes i can be dragged, but you have to drag me for 50px</span>
+  </div>
+
+  <div id="d3">
+    <span>I will be dragged after 200 milliseconds</span>
+  </div>
+
+  <script>
+    $('#d1 span').draggable({ disabled: true });
+    $('#d2 span').draggable({ distance: 50 });
+    $('#d3 span').draggable({ delay: 200 });
+  </script>
+</body>
+</html>

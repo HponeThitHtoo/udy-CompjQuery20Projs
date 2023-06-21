@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding Actions In Spinner</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #spinner-1 input {
+      width: 100px;
+      height: 40px;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#spinner-1').spinner();
+      $('button').button();
+
+      $('#stepUp-1').click(function() {
+        $('#spinner-1').spinner('stepUp');
+      });
+      $('#stepDown-1').click(function() {
+        $('#spinner-1').spinner('stepDown');
+      });
+      $('#pageUp-1').click(function() {
+        $('#spinner-1').spinner('pageUp');
+      });
+      $('#pageDown-1').click(function() {
+        $('#spinner-1').spinner('pageDown');
+      });
+    });
+  </script>
+</head>
+<body>
+  <input type="text" id="spinner-1"><br>
+  <button id="stepUp-1">Give me increment</button>
+  <button id="stepDown-1">Give me decrement</button>
+  <button id="pageUp-1">Page up</button>
+  <button id="pageDown-1">Page down</button>
+</body>
+</html>

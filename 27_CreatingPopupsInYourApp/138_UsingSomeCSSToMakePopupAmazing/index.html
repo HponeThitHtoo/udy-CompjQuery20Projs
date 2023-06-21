@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using Some CSS To Make Popup Amazing</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="header">
+      <h2>This is something different</h2>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <a href="#demo" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show</a>
+
+      <div data-role="popup" data-overlay-theme="b" id="demo" class="ui-content">
+        <p>This is a different background which is not default</p>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <h3>Footer</h3>
+    </div>
+  </div>
+</body>
+</html>

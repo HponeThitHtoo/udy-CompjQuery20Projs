@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dialogs Can Also Be Added To Popups</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="header">
+      <h1>This is a dialog</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <a href="#first" data-rel="popup" data-position="origin" data-transition="slide" class="ui-btn ui-btn-inline">Click here</a>
+
+      <div data-role="popup" id="first">
+        <div data-role="header">
+          <h1>This is a opening dialog</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+          <h1>Welcome to my dialog</h1>
+          <p>This is a dialog which can contain additional info</p>
+
+          <a href="#" class="ui-btn ui-btn-inline ui-icon-back ui-btn-icon-left ui-btn-b" data-rel="back">Back button</a>
+        </div>
+
+        <div data-role="footer">
+          <h4>Footer</h4>
+        </div>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <h3>page footer</h3>
+    </div>
+  </div>
+</body>
+</html>

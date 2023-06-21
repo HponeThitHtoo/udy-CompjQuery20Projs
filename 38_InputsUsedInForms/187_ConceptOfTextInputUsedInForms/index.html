@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Concept Of Text Input Used In Form</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="header">
+      <h3>This is an input</h3>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <form action="" method="POST">
+        <div class="ui-field-contain">
+          <label for="firstname">Firstname:</label>
+          <input type="text" name="firstname" id="firstname">
+          <label for="lastname">Lastname:</label>
+          <input type="text" name="lastname" id="lastname">
+          <label for="birthdate">DOB:</label>
+          <input type="date" name="birthdate" id="birthdate">
+          <label for="email">Email id:</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <input type="submit" value="submit" data-inline="true">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding Options for Droppable Part-2</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #cricket, #football, #tennis, #chess {
+      width: 150px; height: 100px; padding: 0.5em; margin: 0px 5px 10px 0px; float: left;
+    }
+
+    #cricketer, #footballer, #tennisplayer, #chessplayer {
+      width: 100px; height: 80px; padding: 0.5em; margin: 10px; float: left;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#cricketer').draggable();
+      $('#footballer').draggable();
+
+      $('#cricket').droppable({
+        accept: '#cricketer',
+        drop: function(event, ui) {
+          $(this).addClass('ui-state-highlight')
+                  .find('p')
+                  .html('I am dropped now');
+        }
+      });
+
+      $('#football').droppable({
+        accept: '#footballer',
+        drop: function(event, ui) {
+          $(this).addClass('ui-state-highlight')
+                  .find('p')
+                  .html('Dropped');
+        }
+      });
+
+      $('#tennisplayer').draggable({ scope: 'tennis' });
+      $('#chessplayer').draggable({ scope: 'chess' });
+
+      $('#tennis').droppable({
+        scope: 'tennis',
+        drop: function(event, ui) {
+          $(this).addClass('ui-state-highlight')
+                  .find('p')
+                  .html('I am dropped now');
+        }
+      });
+
+      $('#chess').droppable({
+        scope: 'chess',
+        drop: function(event, ui) {
+          $(this).addClass('ui-state-highlight')
+                  .find('p')
+                  .html('I am dropped now');
+        }
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="cricketer" class="ui-widget-content">
+    <p>I'm a cricketer</p>
+  </div>
+  <div id="footballer" class="ui-widget-content">
+    <p>I'm a footballer</p>
+  </div>
+  <div id="tennisplayer" class="ui-widget-content">
+    <p>I'm a tennisplayer</p>
+  </div>
+  <div id="chessplayer" class="ui-widget-content">
+    <p>I'm a chess player</p>
+  </div>
+
+  <div id="cricket" class="ui-widget-header">
+    <p>Cricket</p>
+  </div>
+  <div id="football" class="ui-widget-header">
+    <p>Football</p>
+  </div>
+  <div id="tennis" class="ui-widget-header">
+    <p>Tennis</p>
+  </div>
+  <div id="chess" class="ui-widget-header">
+    <p>Chess</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modifying Grid Using CSS</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    .ui-block-a, .ui-block-b, .ui-block-c {
+      background-color: #999;
+      border: 2px solid #f00;
+      padding: 30px;
+      height: 120px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div data-role="page" id="first">
+    <div data-role="header">
+      <h3>CSS in Grid</h3>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <div class="ui-grid-b">
+        <div class="ui-block-a">This is first</div>
+        <div class="ui-block-b">This is second</div>
+        <div class="ui-block-c">This is third</div>
+      </div>
+    </div>
+
+    <div data-role="footer">
+      <h3>This is footer</h3>
+    </div>
+  </div>
+</body>
+</html>

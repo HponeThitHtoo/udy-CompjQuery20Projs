@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using Actions In Spinner</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #spinner-1 input {
+      width: 100px;
+      height: 40px;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#spinner-1').spinner();
+      $('button').button();
+
+      $('#enableme').click(function() {
+        $('#spinner-1').spinner('enable');
+      });
+
+      $('#disableme').click(function() {
+        $('#spinner-1').spinner('disable');
+      });
+    });
+  </script>
+</head>
+<body>
+    <input type="text" id="spinner-1">
+    <br>
+    <button id="enableme">Enable me from here</button>
+    <button id="disableme">Disable me from here</button>
+</body>
+</html>

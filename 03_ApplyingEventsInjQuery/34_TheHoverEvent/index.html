@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Hover Event</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // inFunction is mendatory, outFunction is optional
+      $('p').hover(function() {
+        $(this).css('background-color', 'green');
+      }, function() {
+        $(this).css('background-color', 'red');
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>This is an ultimate jquery course</p>
+</body>
+</html>

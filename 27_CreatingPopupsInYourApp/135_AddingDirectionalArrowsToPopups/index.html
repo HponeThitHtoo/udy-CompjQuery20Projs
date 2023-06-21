@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adding Directional Arrows To Popups</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page">
+    <div data-role="header">
+      <h1>Arrow representation</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <a href="#first" data-rel="popup" data-position-to="#new" class="ui-btn ui-btn-inline">Left</a>
+      <a href="#second" data-rel="popup" data-position-to="#new" class="ui-btn ui-btn-inline">Top</a>
+      <a href="#third" data-rel="popup" data-position-to="#new" class="ui-btn ui-btn-inline">Right</a>
+      <a href="#fourth" data-rel="popup" data-position-to="#new" class="ui-btn ui-btn-inline">Bottom</a>
+
+      <div data-role="popup" id="first" class="ui-content" data-arrow="l">
+        <p>representing left arrow</p>
+      </div>
+
+      <div data-role="popup" id="second" class="ui-content" data-arrow="t">
+        <p>representing left arrow</p>
+      </div>
+
+      <div data-role="popup" id="third" class="ui-content" data-arrow="r">
+        <p>representing left arrow</p>
+      </div>
+
+      <div data-role="popup" id="fourth" class="ui-content" data-arrow="b">
+        <p>representing left arrow</p>
+      </div>
+
+      <p>This will show you the representation of different arrows <span id="new" style="color: blue;">effects</span></p>
+    </div>
+
+    <div data-role="footer">
+      <h1>Footer</h1>
+    </div>
+  </div>
+</body>
+</html>

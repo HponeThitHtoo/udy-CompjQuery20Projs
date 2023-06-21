@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using Options in Sliders Part-2</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      $('#slider-1').slider({
+        range: true,
+        min: 0,
+        max: 50,
+        values: [30, 50],
+        slide: function(event, ui) {
+          $('#size').val('$' + ui.values[0] + '-$' + ui.values[1]);
+        }
+      });
+
+      $('#size').val('$' + $('#slider-1').slider('values', 0) + '-$' + $('#slider-1').slider('values', 1));
+    });
+  </script>
+</head>
+<body>
+  <p>
+    <label for="size">Size range:</label>
+    <input type="text" name="" id="size" style="border: 1px solid; color: #f00;">
+  </p>
+  <div id="slider-1"></div>
+</body>
+</html>

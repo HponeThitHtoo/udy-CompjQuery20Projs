@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Working With The Index In Selectables</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #selectable-1 .ui-selecting {
+      background: #0f0;
+    }
+    #selectable-1 .ui-selected {
+      background: #ff0;
+      color: #093;
+    }
+    #selectable-1 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 20%;
+    }
+    #selectable-1 li {
+      margin: 4px;
+      padding: 0.4em;
+      height: 20px;
+    }
+    .ui-widget-content {
+      background: #06f;
+      color: #f00;
+      border: #903 3px solid;
+    }
+    .selectedoption {
+      background: #ffc;
+      border: 2px solid #0fc;
+      font-size: 18px;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#selectable-1').selectable({
+        selected: function() {
+          var select = $('#select').empty();
+          $('.ui-selected', this).each(function() {
+            var index = $('#selectable-1 li').index(this);
+            select.append('#' + (index + 1));
+          });
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Events with selectable method</h1>
+  <ol id="selectable-1">
+    <li class="ui-widget-content">Course 1</li>
+    <li class="ui-widget-content">Course 2</li>
+    <li class="ui-widget-content">Course 3</li>
+    <li class="ui-widget-content">Course 4</li>
+    <li class="ui-widget-content">Course 5</li>
+    <li class="ui-widget-content">Course 6</li>
+    <li class="ui-widget-content">Course 7</li>
+    <li class="ui-widget-content">Course 8</li>
+  </ol>
+  <p class="selectedoption">Selected courses</p>
+  <p id="select" class="selectedoption"></p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction Actions Used In Sortables</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #sortable-1 {
+      margin: 0;
+      padding: 0;
+      width: 29%;
+      list-style-type: none;
+    }
+    #sortable-1 li {
+      margin: 0px 3px 3px 3px;
+      padding: 0.4em;
+      height: 19px;
+      font-size: 18px;
+    }
+    .default {
+      background: #0fc;
+      color: #00f;
+      border: #099;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#sortable-1').sortable({
+        update: function(event, ui) {
+          var result = $(this).sortable('toArray').toString();
+          $('#sortable-2').text(result);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Here we will peform an action on sortable</h1>
+  <ul id="sortable-1">
+    <li id="sort-1" class="default">Player 1</li>
+    <li id="sort-2" class="default">Player 2</li>
+    <li id="sort-3" class="default">Player 3</li>
+    <li id="sort-4" class="default">Player 4</li>
+    <li id="sort-5" class="default">Player 5</li>
+  </ul>
+  <span id="sortable-2"></span>
+</body>
+</html>

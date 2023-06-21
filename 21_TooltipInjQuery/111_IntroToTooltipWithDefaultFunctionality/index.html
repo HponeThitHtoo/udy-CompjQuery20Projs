@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction to Tooltip with Default Functionality</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      $('#tooltip-1').tooltip();
+      $('#tooltip-2').tooltip();
+    });
+  </script>
+</head>
+<body>
+  <label for="name">Please enter your name</label>
+  <input type="text" id="tooltip-1" title="Please enter your name here">
+  <p>
+    <a href="" id="tooltip-2" title="Submit your form here">Submit form here</a>
+  </p>
+</body>
+</html>

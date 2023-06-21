@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction To Sortables with Default Functionality</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #sortable-1 {
+      background: #ccc;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: 28%;
+    }
+    #sortable-1 li {
+      padding: 0.4em;
+      margin: 0 3px 3px 3px;
+      height: 18px;
+      font-size: 18px;
+    }
+    .default {
+      background: #f00;
+      border: 3px solid;
+      color: #0f0;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#sortable-1').sortable();
+    });
+  </script>
+</head>
+<body>
+  <h1>Games available are as follows</h1>
+  <ul id="sortable-1">
+    <li class="default">Cricket</li>
+    <li class="default">Tennis</li>
+    <li class="default">Chess</li>
+    <li class="default">Table Tennis</li>
+    <li class="default">Swimming</li>
+    <li class="default">Badminton</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Discussion On Droppable Options With Default Functionality</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #dragg-1 {
+      width: 150px;
+      height: 100px;
+      padding: 0.5em;
+      /* float: left; */
+      margin: 20px 5px 10px 0px;
+    }
+
+    #drop-1 {
+      width: 200px;
+      height: 200px;
+      padding: 0.5em;
+      margin: 10px;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#dragg-1').draggable();
+      $('#drop-1').droppable();
+    });
+  </script>
+</head>
+<body>
+  <div id="dragg-1" class="ui-widget-content">
+    <p>Hello, i am john<br>Please drop me</p>
+  </div>
+  <div id="drop-1" class="ui-widget-header">
+    <p>Thank you for dropping</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The MouseEnter Event</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#abc').mouseenter(function() {
+        $('div').text('Event has occured').show().fadeOut(1000);
+      });
+    });
+  </script>
+</head>
+<body>
+  <p id="abc">This is something</p>
+  <div></div>
+</body>
+</html>

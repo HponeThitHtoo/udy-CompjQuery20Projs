@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding Different Actions Used in Accordion</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #accordion-1 {
+      font-size: 18px;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#accordion-1').accordion({
+        disable: false,
+      });
+
+      $('input').each(function() {
+        $(this).change(function() {
+          if($(this).attr('id') == 'disaccordion') {
+            $('#accordion-1').accordion('option', 'disabled', true);
+            console.log(true);
+          } else {
+            $('#accordion-1').accordion('option', 'disabled', false);
+            console.log(false);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="accordion-1">
+    <h1>Who am I?</h1>
+    <div>
+      <p>
+        I am an udemy instructor teaching all the programming and web designing courses and i am also an graphical user interface designer.
+      </p>
+    </div>
+
+    <h1>What am I teaching?</h1>
+    <div>
+      <p>
+        I am teaching jQuery User Interface which will help my students to be an interface designer and they can earn $$$$.
+      </p>
+    </div>
+
+    <h1>From how many years am I teaching?</h1>
+    <div>
+      <p>
+        I am teaching from 8 years and my students are in 98 countries.
+      </p>
+    </div>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <input type="radio" name="disable" id="disaccordion" value="disable"> disable the accordion here
+    <input type="radio" name="disable" id="enbableaccordion" value="enable" checked="checked"> enable the accordion here
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pages Can Also Be Used As Dialog In jQuery Mobile</title>
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+  <div data-role="page" id="first">
+    <div data-role="header">
+      <h1>Welcome to my app</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <p>here is an app being designed</p>
+      <a href="#second">Goto the dialog box</a>
+    </div>
+
+    <div data-role="footer">
+      <h2>This is a footer</h2>
+    </div>
+  </div>
+
+  <div data-role="page" data-dialog="true" id="second">
+    <div data-role="header">
+      <h1>I am also a header</h1>
+    </div>
+    <div data-role="main" class="ui-content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, praesentium. Eos laborum explicabo tempore optio, architecto voluptatum sit repellendus doloremque eum neque temporibus ut expedita, vero cum fuga quo asperiores molestiae a officia eius quam distinctio! Atque libero excepturi consequuntur et quasi ullam quae impedit. Nisi amet quas magnam eaque?</p>
+      <a href="#first">Like go to first</a>
+    </div>
+    <div data-role="footer">
+      <h2>This is a footer</h2>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Advanced Helper Option in Draggable</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+  <div id="div1" style="border: 2px solid #ff0; height: 45px; background-color: #0ff;">
+    <span>Hello, just dragme, see, i can be duplicated</span>
+  </div>
+
+  <script>
+    $( "#div1 span" ).draggable({
+      helper: "clone"
+    });
+
+  </script>
+</body>
+</html>

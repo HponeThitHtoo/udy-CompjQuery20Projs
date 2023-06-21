@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Discuss on Draggable Options With Default Functionality</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #dragg {
+      width: 100px;
+      height: 100px;
+      padding: 0.5em;
+      background-color: #0f3;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      $(function() {
+        $('#dragg').draggable();
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="dragg" class="ui-widget-content">
+    <p>Hey there, please drag me</p>
+  </div>
+</body>
+</html>

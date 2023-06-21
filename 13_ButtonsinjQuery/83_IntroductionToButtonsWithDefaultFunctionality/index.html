@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction To Buttons With Default Functionality</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+    $(function() {
+      $('#button-1, #button-2, #button-3, #button-4').button();
+      $('#button-5').buttonset();
+    });
+  </script>
+</head>
+<body>
+  <button id="button-1">I am a button</button>
+  <input type="submit" id="button-2" value="submit">
+  <a href="#" id="button-3">A link</a>
+  <input type="checkbox" name="" id="button-4">
+  <label for="button-4">Enter any thing</label>
+  <br>
+  <br>
+
+  <div id="button-5">
+    <input type="checkbox" name="" id="middle">
+    <label for="middle">Middle button</label>
+  </div>
+</body>
+</html>

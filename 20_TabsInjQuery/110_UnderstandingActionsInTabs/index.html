@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding Actions in Tabs</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #tabs {
+      font-size: 16px;
+    }
+
+    .ui-widget-header {
+      background: #0ff;
+      border: #f00 2px solid;
+      color: #006;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#tabs').tabs();
+      $('#tabs').tabs('disable');
+      
+    });
+  </script>
+</head>
+<body>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tab-1">HTML</a></li>
+      <li><a href="#tab-2">Javascript</a></li>
+      <li><a href="#tab-3">jQuery</a></li>
+    </ul>
+
+    <div id="tab-1">
+      <p>
+        HTML is a hypertext markup language. It is very useful.
+      </p>
+    </div>
+
+    <div id="tab-2">
+      <p>
+        Javascript is also another important language and is used for validation
+      </p>
+    </div>
+
+    <div id="tab-3">
+      <p>
+        You are learning jQuery UI... How is this course?
+      </p>
+    </div>
+  </div>
+</body>
+</html>

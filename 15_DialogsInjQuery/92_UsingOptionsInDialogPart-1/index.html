@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Using Options in Dialog Part-1</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    .ui-widget-header, .ui-state-default, .ui-button {
+      background: #ff0;
+      color: #f00;
+      font-size: 18px;
+      border: #000 4px solid;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#dialog-1').dialog({
+        autoOpen: false,
+        buttons: {
+          Close: function() {
+            $(this).dialog('close');
+          }
+        },
+        title: 'Scope of jQuery UI',
+        position: {
+          my: 'left center',
+          at: 'left center',
+        },
+        closeOnEscape: false,
+        modal: true,
+        draggable: false,
+      });
+
+      $('#checkme').click(function() {
+        $('#dialog-1').dialog('open');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="dialog-1" title="Here is the title...">I am earning 70,000 by working as an user interface designer</div>
+  <button id="checkme">Please click me</button>
+</body>
+</html>

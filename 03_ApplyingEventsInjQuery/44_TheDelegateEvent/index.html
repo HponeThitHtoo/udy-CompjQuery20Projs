@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Delegate Event</title>
+  <style>
+    p {
+      background-color: #0f0;
+    }
+
+    p.over {
+      background-color: #0ff;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+  <p>This is a complete course on jquery</p>
+
+  <script>
+    $(document).ready(function() {
+      $('body').delegate('p', 'click', function() {
+        $(this).after('<p>This is an amazing course</p>');
+      });
+    });
+  </script>
+</body>
+</html>

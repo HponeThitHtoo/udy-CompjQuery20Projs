@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Discussing On Action Used In Draggable</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+  <div id="div1" style="border: 2px solid; background-color: #9ff; font-size: 24px;">
+    <span>Hello, i cannot be moved, because i am disabled</span>
+  </div>
+  <div id="div2" style="border: 2px solid; background-color: #6ff; font-size: 24px;">
+    <span>Hello, i can be easily moved.</span>
+  </div>
+
+  <script>
+    $('#div1 span').draggable();
+    $('#div1 span').draggable('disable');
+    $('#div2 span').draggable();
+    $('#div2 span').draggable('enable');
+  </script>
+</body>
+</html>

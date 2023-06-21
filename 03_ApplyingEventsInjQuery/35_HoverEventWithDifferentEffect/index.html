@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HoverEvent with Different Effect</title>
+  <style>
+    span {
+      color: #f00;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+  <ul>
+    <li>Team1</li>
+    <li>Team2</li>
+    <li class="fade">Team3</li>
+    <li class="fade">Team4</li>
+    <li>Team5</li>
+  </ul>
+
+  <script>
+    $(document).ready(function() {
+      $('li').hover(function() {
+        $(this).append($('<span>***</span>'))
+      }, function() {
+        $(this).find('span:last').remove();
+      });
+
+      $('li.fade').hover(function() {
+        $(this).fadeOut(200);
+        $(this).fadeIn(400);
+      });
+    });
+  </script>
+</body>
+</html>

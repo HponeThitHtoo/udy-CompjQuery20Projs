@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding Options In Sortables Part-2</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #sortable-1 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 30%;
+    }
+    #sortable-1 li {
+      margin: 0px 3px 3px 3px;
+      height: 20px;
+      padding: 0.4em;
+      font-size: 24px;
+    }
+    .highlight {
+      background: #09f;
+      border: 3px solid #0f0;
+      font-size: 36px;
+    }
+    .default {
+      background: #f00;
+      color: #f0f;
+      border: 2px solid #030;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#sortable-1').sortable({
+        placeholder: 'highlight',
+      });
+    });
+  </script>
+</head>
+<body>
+  <h3>Here is the list of players</h3>
+  <ul id="sortable-1">
+    <li class="default">Player 1</li>
+    <li class="default">Player 2</li>
+    <li class="default">Player 3</li>
+    <li class="default">Player 4</li>
+    <li class="default">Player 5</li>
+  </ul>
+</body>
+</html>

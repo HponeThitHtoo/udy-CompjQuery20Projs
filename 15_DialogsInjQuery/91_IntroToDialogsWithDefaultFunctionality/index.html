@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Introduction To Dialogs With Default Functionality</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    .ui-widget-header, .ui-state-default, .ui-button {
+      background-color: #0f6;
+      border: 4px solid #f00;
+      color: #00f;
+      font-size: 16px;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#dialog-1').dialog({
+        autoOpen: false,
+      });
+
+      $('#clickbox').click(function() {
+        $('#dialog-1').dialog('open');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="dialog-1" title="jQuery UI">jQuery User Interface is awarded as the best tool or language for designing the attractive user interface</div>
+  <button id="clickbox">Click here</button>
+</body>
+</html>

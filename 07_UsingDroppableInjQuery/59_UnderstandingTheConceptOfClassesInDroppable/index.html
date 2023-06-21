@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Understanding The Concept of Classes in Droppable</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    #dragg-1 {
+      width: 100px; height: 80px; padding: 0.5em; margin: 10px; float: left;
+    }
+    #drop-1 {
+      width: 150px; height: 100px; padding: 0.5em; margin: 0px 5px 10px 0px; float: left;
+    }
+    .active {
+      border-color: #f00;
+      background: #9cc;
+    }
+    .hover {
+      border-color: #00f;
+      background: #0fc;
+    }
+  </style>
+  <script>
+    $(function() {
+      $('#dragg-1').draggable();
+      $('#drop-1').droppable({
+        activeClass: 'active',
+        hoverClass: 'hover',
+        drop: function(event, ui) {
+          $(this).addClass('ui-state-highlight')
+                  .find('p')
+                  .html('Hello, i am dropped to my target location');
+        }
+      });
+    
+    });
+  </script>
+</head>
+<body>
+  <div id="dragg-1" class="ui-widget-content">
+    <p>Drag me to my target please</p>
+  </div>
+  <div id="drop-1" class="ui-widget-header">
+    <p>Please hover me or drop me</p>
+  </div>
+</body>
+</html>
